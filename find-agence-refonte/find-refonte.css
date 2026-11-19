@@ -1,0 +1,375 @@
+/* ===== Find — refonte (design Figma « Agency finder ») ===== */
+.find{
+	background: linear-gradient(105deg, #e1ebe3 0%, #f9f9ee 100%);
+	padding: 48px 24px;
+}
+
+.find .find-panel{
+	max-width: 1280px;
+	margin: 0 auto;
+	background: #fbfaf6;
+	border: 1px solid #e9e5d8;
+	border-radius: 32px;
+	display: flex;
+	min-height: 592px;
+	overflow: hidden;
+}
+
+/* --- Colonne recherche --- */
+.find .find-search{
+	flex: 0 0 560px;
+	width: 560px;
+	padding: 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+}
+
+.find .find-title{
+	width: 100%;
+	margin: 0;
+	font-family: 'Geist', sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 44px;
+	letter-spacing: -1.2px;
+	color: #0d0f0c;
+	text-transform: none;
+}
+
+.find .find-title em{
+	font-family: 'Instrument Serif', serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 45px;
+	color: #007731;
+}
+
+.find .find-form{
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	padding: 1px;
+	margin: 0;
+}
+
+.find .find-input{
+	flex: 1 1 auto;
+	height: 50px;
+	background: #fffdf8;
+	border: 1px solid #e9e5d8;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.find .find-select{
+	width: 100%;
+	border: 0;
+	background: transparent;
+	font-family: 'Geist', sans-serif;
+	font-size: 16px;
+	line-height: 20.8px;
+	color: #003d1f;
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.find .find-btn{
+	flex: 0 0 auto;
+	height: 52px;
+	padding: 0 22px;
+	background: #007731;
+	border: 1px solid #007731;
+	border-radius: 999px;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	font-family: 'Geist', sans-serif;
+	font-weight: 600;
+	font-size: 15.2px;
+	line-height: 18.24px;
+	box-shadow: 0 10px 24px -14px rgba(0, 119, 49, 0.75);
+	cursor: pointer;
+}
+
+.find .find-btn svg{
+	width: 20px;
+	height: 20px;
+	color: #ffffff;
+}
+
+.find .find-locate{
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Geist', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20.8px;
+	color: #007731;
+	text-decoration: underline;
+}
+
+.find .find-locate svg{
+	width: 20px;
+	height: 20px;
+	color: #007731;
+	flex: 0 0 20px;
+}
+
+/* --- Villes populaires --- */
+.find .find-cities{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.find .find-city{
+	height: 36px;
+	padding: 0 13px;
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid #e9e5d8;
+	border-radius: 999px;
+	background: transparent;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-size: 12.5px;
+	line-height: 20.59px;
+	color: #0d0f0c;
+	text-decoration: none;
+}
+
+.find .find-city:hover{
+	background: #f3f0e8;
+	text-decoration: none;
+}
+
+/* --- Résultats --- */
+.find .find-results{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.find .find-result{
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	min-height: 61px;
+	background: #f3f0e8;
+	border-radius: 12px;
+	padding: 12px 13px;
+	box-sizing: border-box;
+}
+
+.find .find-result > svg{
+	width: 20px;
+	height: 20px;
+	flex: 0 0 20px;
+	color: #007731;
+}
+
+.find .find-result-body{
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.find .find-result-body strong{
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
+	font-size: 13.3px;
+	line-height: 17.93px;
+	color: #0d0f0c;
+}
+
+.find .find-result-body span{
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 11.5px;
+	line-height: 19.01px;
+	color: #003d1f;
+}
+
+/* --- Lien « Voir toutes les agences » (garde le hook .load-more) --- */
+.find .load-more,
+.find a.load-more{
+	background: none;
+	color: #007731 !important;
+	padding: 0;
+	border-radius: 0;
+	font-size: 15.2px;
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	line-height: 25.08px;
+	text-decoration: none;
+	align-self: flex-start;
+}
+
+.find .load-more:hover{
+	background: none;
+	text-decoration: underline;
+}
+
+.find .load-more svg{
+	width: 16px;
+	height: 16px;
+	color: #007731;
+}
+
+/* --- Carte --- */
+.find .find-map{
+	position: relative;
+	flex: 1 1 auto;
+	min-height: 590px;
+	border-radius: 0 32px 32px 0;
+	overflow: hidden;
+	background: #e9efe4;
+}
+
+.find .find-map iframe{
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0;
+	filter: grayscale(1);
+}
+
+.find .find-map-tint{
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.3;
+	background: linear-gradient(90deg, #faf8e7 0%, #cdec85 62%, #c3e0bc 100%);
+}
+
+.find .find-pin{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.find .find-pin svg{
+	width: 23.4px;
+	height: 30px;
+}
+
+.find .find-nearest{
+	position: absolute;
+	left: 29.2%;
+	top: 32.2%;
+	width: 233px;
+	box-sizing: border-box;
+	background: #eff6f0;
+	border: 1px solid #e9e5d8;
+	border-radius: 16px;
+	padding: 20px 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.find .find-nearest-label{
+	font-family: 'Geist Mono', monospace;
+	font-size: 12px;
+	line-height: 15.6px;
+	letter-spacing: 0.96px;
+	text-transform: uppercase;
+	color: #003d1f;
+}
+
+.find .find-nearest-name{
+	font-family: 'Geist', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 23.4px;
+	color: #0d0f0c;
+}
+
+.find .find-nearest-link{
+	font-family: 'Geist', sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 19.5px;
+	color: #007731;
+	text-decoration: none;
+}
+
+.find .find-nearest-link:hover{
+	text-decoration: underline;
+}
+
+.find .find-map-caption{
+	position: absolute;
+	left: 3.3%;
+	top: 57.6%;
+	font-family: 'Geist Mono', monospace;
+	font-size: 12px;
+	line-height: 15.6px;
+	letter-spacing: 0.96px;
+	text-transform: uppercase;
+	color: #003d1f;
+	pointer-events: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1100px){
+	.find{
+		padding: 32px 16px;
+	}
+	.find .find-panel{
+		flex-direction: column;
+		min-height: 0;
+	}
+	.find .find-search{
+		flex: 0 0 auto;
+		width: 100%;
+		padding: 32px 24px;
+	}
+	.find .find-title{
+		font-size: 32px;
+		line-height: 36px;
+	}
+	.find .find-title em{
+		font-size: 36px;
+	}
+	.find .find-map{
+		min-height: 420px;
+		border-radius: 0 0 32px 32px;
+	}
+}
+
+@media (max-width: 560px){
+	.find .find-form{
+		flex-direction: column;
+	}
+	.find .find-btn{
+		width: 100%;
+	}
+	.find .find-nearest{
+		left: 16px;
+		right: 16px;
+		top: auto;
+		bottom: 48px;
+		width: auto;
+	}
+}
